@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="projekat.Page1">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" VerticalOptions="Center" Padding="50">
+            
+            <Frame BackgroundColor="Orange" Padding="24" CornerRadius="0">
+                <Label Text="SafetyCar" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+            <TableView Intent="Settings">
+                <TableRoot>
+                    <TableSection Title="Prijava servisa">
+                        <SwitchCell Text="Naši dijelovi" On="true" />
+                        <EntryCell Label="Vaše ime:" Placeholder="Unesite vaše ime i prezime"  />
+                        <EntryCell Label="Broj telefona:" Placeholder="+387" Keyboard="Telephone"/>
+                    </TableSection>
+                    <TableSection Title="OSTALO">
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="username.png" />
+                                <Entry Placeholder="Napomena za mehaničara" Keyboard="Text"/>
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                
+                                <Entry Placeholder="Dodatne usluge" />
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
